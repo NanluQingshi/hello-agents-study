@@ -1,0 +1,18 @@
+# Hello Agents Study - 根目录通用依赖
+# 适用于 Chapter-01 ~ Chapter-05, Chapter-07 的大多数脚本
+#
+# 使用方法:
+#   uv venv && source .venv/bin/activate
+#   uv pip install -r requirements.txt
+#
+# 各章节独立框架依赖（AgentScope / Camel 等）见对应目录下的 requirements.txt
+
+requests>=2.31
+python-dotenv>=1.0
+openai>=1.0
+tavily>=1.0
+numpy>=1.24
+pydantic>=2.0
+colorama>=0.4
+streamlit>=1.30
+serpapi>=1.0

@@ -1,0 +1,8 @@
+# LangGraph 框架依赖
+# 安装: uv pip install -r Chapter-06/LangGraph/requirements.txt
+
+langgraph>=0.2
+langchain-openai>=0.2
+langchain-core>=0.3
+tavily>=1.0
+python-dotenv>=1.0

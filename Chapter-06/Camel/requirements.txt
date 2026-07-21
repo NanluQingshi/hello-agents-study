@@ -1,0 +1,6 @@
+# Camel 框架依赖
+# 安装: uv pip install -r Chapter-06/Camel/requirements.txt
+
+camel-ai>=0.2.0
+colorama>=0.4
+python-dotenv>=1.0
