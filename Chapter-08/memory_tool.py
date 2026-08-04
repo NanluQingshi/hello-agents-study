@@ -1,4 +1,28 @@
-class MemoryTool:
+class MemoryTool(Tool):
+    def __init__(
+        self,
+        user_id: str = "default_user",
+        memory_config: MemoryConfig = None,
+        memory_types: List[str] = None
+    ):
+        super().__init__(
+            name="memory",
+            description="记忆工具 - 可以存储和检索对话历史、知识和经验"
+        )
+        
+        # 初始化记忆管理器
+        self.memory_config = memory_config or MemoryConfig()
+        self.memory_types = memory_types or ["working", "episodic", "semantic"]
+        
+        self.memory_manager = MemoryManager(
+            config=self.memory_config,
+            user_id=user_id,
+            enable_working="working" in self.memory_types,
+            enable_episodic="episodic" in self.memory_types,
+            enable_semantic="semantic" in self.memory_types,
+            enable_perceptual="perceptual" in self.memory_types
+        )
+
     def execute(self, action: str, **kwargs) -> str:
         """执行记忆操作
 
